@@ -1,7 +1,7 @@
 plugins {
     id("application")
     id("distribution")
-    id("checkstyle")
+    checkstyle
 }
 application { mainClass.set("hexlet.code.App") }
 
