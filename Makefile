@@ -1,8 +1,8 @@
 run-dist:
 	make -C app run-dist
 
-lint:
-	make -C app lint
+checkstyleMain:
+	make -C app checkstyleMain
 
 build:
 	make -C app build
