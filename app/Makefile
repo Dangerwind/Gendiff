@@ -14,7 +14,6 @@ install:
 
 run-dist:
 	./build/install/app/bin/app
-#	./build/install/java-package/bin/java-package
 
 run:
 	./gradlew run
@@ -30,7 +29,6 @@ checkstyleMain:
 
 check-deps:
 	./gradlew dependencyUpdates -Drevision=release
-
 
 build-run: build run
 

@@ -5,7 +5,7 @@ import picocli.CommandLine.Command;
 
 import java.util.concurrent.Callable;
 
-@Command(name="gendiff", mixinStandardHelpOptions = true, version = "gendiff V1.0b",
+@Command(name = "gendiff", mixinStandardHelpOptions = true, version = "gendiff V1.0b",
         description = "Compares two configuration files and shows a difference.")
 public class App implements Callable<Integer> {
     @CommandLine.Parameters(index = "0", paramLabel = "filepath1", description = "path to first file")
