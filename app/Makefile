@@ -15,7 +15,6 @@ run:
 test:
 	./gradlew test
 
-
 checkstyleMain:
 	./gradlew checkstyleMain
 
