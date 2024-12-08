@@ -10,9 +10,9 @@ import static hexlet.code.Utilites.Stat;
 public final class OutData {
     @Getter
     private int length;
-    private List<Stat> status = new ArrayList<>();
-    private List<String> key = new ArrayList<>();
-    private List<Object> value = new ArrayList<>();
+    private final List<Stat> status = new ArrayList<>();
+    private final List<String> key = new ArrayList<>();
+    private final List<Object> value = new ArrayList<>();
     public void outData() {
         length = 0;
     }
