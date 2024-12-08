@@ -19,9 +19,9 @@ jobs:
         with:
           gradle-version: 8.7
 
-      - run: ./gradlew checkstyleMain checkstyleTest
+      - run: gradlew checkstyleMain checkstyleTest
 
-      - run: ./gradlew test
+      - run: gradlew test
 
       - run: make report
 
