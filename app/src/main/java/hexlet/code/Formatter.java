@@ -10,16 +10,12 @@ import java.util.Map;
 
 public class Formatter {
     public static String formatter(OutData base, String format) throws JsonProcessingException {
-        switch(format) {
-            case "json" :
-                return makeJson(base);
-            case "stylish" :
-                return makeStylish(base);
-            case "plain" :
-                return  makePlain(base);
-            default:
-                throw new IllegalArgumentException("Unsupported format");
-        }
+        return switch (format) {
+            case "json" -> makeJson(base);
+            case "stylish" -> makeStylish(base);
+            case "plain" -> makePlain(base);
+            default -> throw new IllegalArgumentException("Unsupported format");
+        };
     }
 
 
@@ -68,7 +64,8 @@ public class Formatter {
             }
             jsonMapa.add(element);
         }
-        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonMapa)+System.lineSeparator();
+        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonMapa)
+                + System.lineSeparator();
     }
 
     public static String makeStylish(OutData base) {
