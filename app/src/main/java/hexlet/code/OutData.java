@@ -7,7 +7,7 @@ import java.util.List;
 
 import static hexlet.code.Utilites.Stat;
 
-public class OutData {
+public final class OutData {
     @Getter
     private int length;
     private List<Stat> status = new ArrayList<>();
