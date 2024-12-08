@@ -4,9 +4,9 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/89d9658bf7fac506ca70/test_coverage)](https://codeclimate.com/github/Dangerwind/java-project-71/test_coverage)
 
 _Все аскинемы переконвертированные в gif файлы и сохранены в репозитории_
-***
 
 # Вычислитель отличий Gendiff
+***
   Программа сравнивает два файла, находит добавленные, удаленные, измененные или одинаковые записи и выводи информацию о всех изменениях.
 Входные файлы могут быть в формате json или yaml (yml).
 
