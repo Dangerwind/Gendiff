@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import hexlet.code.Differ;
 
-public class DifferTest {
+public final class DifferTest {
     private static String compareStylish;
     private static String compareJson;
     private static String comparePlain;
