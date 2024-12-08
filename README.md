@@ -27,7 +27,7 @@ cd java-project-71/app
 ./build/install/app/bin/app -h
 ```
 
-![] (https://github.com/Dangerwind/java-project-71/blob/main/GIF/01-help.gif)
+![](https://github.com/Dangerwind/java-project-71/blob/main/GIF/01-help.gif)
 
 
 | <!-- -->  | <!-- -->                                     |
