@@ -1,16 +1,10 @@
 name: Java CI
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  - push
+  - pull_request
 
-defaults:
-  run:
-    working-directory: app
+
 
 jobs:
   build:
@@ -33,3 +27,8 @@ jobs:
 
       - name: Checkstyle
         run: make checkstyleMain
+
+      - name: Tests
+        run: make test
+
+
