@@ -86,7 +86,7 @@ public class Formatter {
                 default:
                     break;
             }
-            outputString.append(base.getKey(i)).append(" ").
+            outputString.append(base.getKey(i)).append(": ").
                     append(base.getValue(i)).append(System.lineSeparator());
         }
 
