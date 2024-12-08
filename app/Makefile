@@ -3,14 +3,8 @@
 setup:
 	./gradlew wrapper --gradle-version 8.7
 
-clean:
-	./gradlew clean
-
 build:
 	./gradlew clean build
-
-install:
-	./gradlew clean install
 
 run-dist:
 	./build/install/app/bin/app
@@ -21,14 +15,12 @@ run:
 test:
 	./gradlew test
 
-report:
-	./gradlew jacocoTestReport
 
 checkstyleMain:
 	./gradlew checkstyleMain
 
-check-deps:
-	./gradlew dependencyUpdates -Drevision=release
+checkstyleTest:
+	./gradlew checkstyleTest
 
 build-run: build run
 
