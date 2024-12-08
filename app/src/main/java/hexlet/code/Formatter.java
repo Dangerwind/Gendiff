@@ -100,9 +100,9 @@ public class Formatter {
             if ((base.getStatus(i) == Utilites.Stat.INVARIABLY) || (base.getStatus(i) == Utilites.Stat.CHANGETWO)) {
                 continue;
             }
-       //     if (i > 0) {
+            if (i > 0) {
                 outputString.append(System.lineSeparator());
-        //    }
+            }
             outputString.append("Property '").append(base.getKey(i)).append("' was ");
             switch (base.getStatus(i)) {
                 case ADD:
