@@ -118,7 +118,8 @@ public class Formatter {
                 default: break;
             }
         }
-        return outputString.toString();
+       // return outputString.toString();
+        return "-- XUI --- ";
     }
 
 
