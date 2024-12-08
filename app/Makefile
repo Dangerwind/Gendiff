@@ -24,4 +24,7 @@ checkstyleTest:
 
 build-run: build run
 
+report:
+	./gradlew jacocoTestReport
+
 .PHONY: build

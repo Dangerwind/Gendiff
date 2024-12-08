@@ -7,5 +7,8 @@ build:
 test:
 	make -C app test
 
+report:
+	make -C app report
+
 
 .PHONY: build
