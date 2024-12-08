@@ -94,8 +94,8 @@ public class Formatter {
     }
 
     public static String makePlain(OutData base) {
-        StringBuilder outputString = null;
-        outputString = new StringBuilder();
+       // StringBuilder outputString = null;
+        var outputString = new StringBuilder();
         for (int i = 0; i < base.getLength(); i++) {
             if ((base.getStatus(i) == Utilites.Stat.INVARIABLY) || (base.getStatus(i) == Utilites.Stat.CHANGETWO)) {
                 continue;
@@ -118,8 +118,7 @@ public class Formatter {
                 default: break;
             }
         }
-       // return outputString.toString();
-        return "-- XUI --- ";
+        return outputString.toString();
     }
 
 
