@@ -64,8 +64,7 @@ public class Formatter {
             }
             jsonMapa.add(element);
         }
-        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonMapa)
-                + System.lineSeparator();
+        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonMapa);
     }
 
     public static String makeStylish(OutData base) {
@@ -91,7 +90,7 @@ public class Formatter {
                     append(base.getValue(i)).append(System.lineSeparator());
         }
 
-        return outputString.append("}").append(System.lineSeparator()).toString();
+        return outputString.append("}").toString();
     }
 
     public static String makePlain(OutData base) {
