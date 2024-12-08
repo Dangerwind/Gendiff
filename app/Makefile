@@ -24,8 +24,4 @@ checkstyleTest:
 
 build-run: build run
 
-start:
-	./build/install/app/bin/app $(f1) $(f2)
-
-
 .PHONY: build
