@@ -1,0 +1,22 @@
+[ {
+  "value1" : false,
+  "state" : "ADD",
+  "key" : "follow"
+}, {
+  "value1" : "hexlet.io",
+  "state" : "INVARIABLY",
+  "key" : "host"
+}, {
+  "value1" : "123.234.53.22",
+  "state" : "REMOVE",
+  "key" : "proxy"
+}, {
+  "value2" : 20,
+  "value1" : 50,
+  "state" : "CHANGE",
+  "key" : "timeout"
+}, {
+  "value1" : true,
+  "state" : "ADD",
+  "key" : "verbose"
+} ]

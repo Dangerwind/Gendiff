@@ -20,8 +20,7 @@ public class OutData {
         status.add(newStatus);
         key.add(newKey);
         value.add(newValue);
-        //value2.add(newValue2);
-        // length ++;
+        length++;
     }
     public  String getKey(int index) {
         return key.get(index);

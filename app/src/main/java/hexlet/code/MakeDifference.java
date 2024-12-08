@@ -12,6 +12,7 @@ public class MakeDifference {
 
         Set<String> keysDatabase = new TreeSet<>(dataMap1.keySet());
         keysDatabase.addAll(dataMap2.keySet());
+
         for (String key : keysDatabase) {
             if (!dataMap1.containsKey(key)) {  // добавили
                 base.add(Utilites.Stat.ADD, key, dataMap2.get(key));
