@@ -1,18 +1,9 @@
 
 # Вычислитель отличий Gendiff
 Программа сравнивает два файла, находит добавленные, удаленные, измененные или одинаковые записи и выводи информацию о всех изменениях.
-Входные файлы могут быть в формате json тдт yaml (yml).
+Входные файлы могут быть в формате json или yaml (yml).
 
-
-Первый проект "Игры разума" состоит из приветствия и 5 игр.
-* Приветствие (Greet)
-* Четное нечетное (Even)
-* Счет в уме (Calc)
-* Наибольший общий делитель (GCD)
-* Прогрессии (Progression)
-* Простые числа (Prime)
-
-Скопируйте игру себе на компьютер и запустите.
+Скопируйте программу себе на компьютер:
 ```
 cd
 ```
@@ -45,11 +36,15 @@ cd java-project-71/app
 ![](https://github.com/Dangerwind/java-project-71/blob/main/GIF/02-plain.gif)
  
 Или воспользуйтесь выводом в формат stylish:
-
+```
+./build/install/app/bin/app -f=stylish path/file1.json path/file2.json
+```
 ![](https://github.com/Dangerwind/java-project-71/blob/main/GIF/03-stylish.gif)
 
 Или используйте формат json:
-
+```
+./build/install/app/bin/app -f=json path/file1.json path/file2.json
+```
 ![](https://github.com/Dangerwind/java-project-71/blob/main/GIF/04-json.gif)
 
 
