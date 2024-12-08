@@ -21,5 +21,8 @@ public class Differ {
 
         return formatter(base, format);
     }
+    public static String generate(String fileName1, String fileName2) throws Exception {
+        return generate(fileName1, fileName2, "stylish");
+    }
 }
 
