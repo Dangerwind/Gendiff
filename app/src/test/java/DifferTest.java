@@ -58,6 +58,7 @@ public final class DifferTest {
         String actual = Differ.generate(PATH_FIXTURES + "1." + format, PATH_FIXTURES + "2." + format);
         assertEquals(compareStylish, actual);
     }
+// если файлы окажутся пустыми
     @Test
     public void testEmpty () throws Exception {
         String actual = Differ.generate(PATH_FIXTURES + "empty.json", PATH_FIXTURES + "empty.json", "json");

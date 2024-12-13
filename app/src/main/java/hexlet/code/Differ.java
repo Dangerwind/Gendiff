@@ -20,6 +20,7 @@ public class Differ {
         System.out.println(fullFileData1);
         System.out.println(" ----- 2 ----- ");
         System.out.println(fullFileData2);
+        System.out.println(" ---- ^^^ ---- ");
 
         String dataType1 = getFileType(fileName1);
         String dataType2 = getFileType(fileName2);
@@ -27,6 +28,9 @@ public class Differ {
         Map<String, Object> dataMap1 = Parser.parser(fullFileData1, dataType1);
         Map<String, Object> dataMap2 = Parser.parser(fullFileData2, dataType2);
         List<Map<String, Object>> base = makeDifference(dataMap1, dataMap2);
+        System.out.println(" -- answer ---");
+        System.out.println(formatter(base, format));
+        System.out.println(" -- ^ end ^ --- ");
 
         return formatter(base, format);
     }
