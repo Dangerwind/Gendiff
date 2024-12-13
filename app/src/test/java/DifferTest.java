@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -55,6 +56,11 @@ public final class DifferTest {
     @ValueSource(strings = {"json", "yaml"})
     public void testDefaultResult(String format) throws Exception {
         String actual = Differ.generate(PATH_FIXTURES + "1." + format, PATH_FIXTURES + "2." + format);
+        assertEquals(compareStylish, actual);
+    }
+    @Test
+    public void testEmpty () throws Exception {
+        String actual = Differ.generate(PATH_FIXTURES + "empty.json", PATH_FIXTURES + "empty.json", "json");
         assertEquals(compareStylish, actual);
     }
 }
