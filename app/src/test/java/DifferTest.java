@@ -14,11 +14,10 @@ public final class DifferTest {
     private static String compareJson;
     private static String comparePlain;
 
-    private static final String FILE_STYLISH = "src/test/resources/fixtures/result.stylish";
-    private static final String FILE_JSON = "src/test/resources/fixtures/result.json";
-    private static final String FILE_PLAIN = "src/test/resources/fixtures/result.plain";
-    private static final String PATH_FIXTURES = "src/test/resources/fixtures/file";
-
+    private static final String FILE_STYLISH = "/Users/andreikokorev/java-project-71/app/src/test/resources/fixtures/result.stylish";
+    private static final String FILE_JSON = "/Users/andreikokorev/java-project-71/app/src/test/resources/fixtures/result.json";
+    private static final String FILE_PLAIN = "/Users/andreikokorev/java-project-71/app/src/test/resources/fixtures/result.plain";
+    private static final String PATH_FIXTURES = "/Users/andreikokorev/java-project-71/app/src/test/resources/fixtures/file";
 
     @BeforeAll
     public static void readAllAnswers() throws Exception {

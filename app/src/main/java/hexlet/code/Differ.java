@@ -1,6 +1,7 @@
 package hexlet.code;
 
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
@@ -28,12 +29,15 @@ public class Differ {
 
         return formatter(base, format);
     }
+    private static Path getFixturePath(String fileName) {
+        return Paths.get("app","src","test", "resources", "fixtures", fileName).toAbsolutePath().normalize();
+    }
     public static String generate(String fileName1, String fileName2) throws Exception {
         return generate(fileName1, fileName2, "stylish");
     }
-
     public static String readFile(String fileName) throws Exception {
-        return new String(Files.readAllBytes(Paths.get(fileName)));
+        if (fileName.charAt(0) == '/') return new String(Files.readAllBytes(Paths.get(fileName)));
+        return new String(Files.readAllBytes(getFixturePath(fileName)));
     }
 
     public static String getFileType(String fileName) {
