@@ -11,8 +11,8 @@ import static hexlet.code.MakeDifference.makeDifference;
 
 public class Differ {
     public static String generate(String fileName1, String fileName2, String format) throws Exception {
-        String fullFileData1 = readFile(fileName1);
-        String fullFileData2 = readFile(fileName2);
+        String fullFileData1 = readFile(fileName1).trim();
+        String fullFileData2 = readFile(fileName2).trim();
 
         if ((fullFileData1.isEmpty()) || (fullFileData2.isEmpty())) throw new Error("File is empty!");
 

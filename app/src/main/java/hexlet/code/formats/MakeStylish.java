@@ -18,8 +18,10 @@ public class MakeStylish {
         outputString = new StringBuilder("{");
         outputString.append(System.lineSeparator());
         for (var i: base) {
-
-            String valueOne = i.get(VALUE1).toString();
+            String valueOne = "";
+            if (i.get(VALUE1) != null) {
+                valueOne = i.get(VALUE1).toString();
+            } else valueOne="null";
 
             switch (i.get(STATUS)) {
                 case Stat.ADD:
@@ -34,7 +36,9 @@ public class MakeStylish {
                 case Stat.CHANGE:
                     outputString.append("  - ").append(i.get(KEY)).append(": ").
                             append(valueOne).append(System.lineSeparator());
-                    valueOne = i.get(VALUE2).toString();
+                    if (i.get(VALUE2) != null) {
+                        valueOne = i.get(VALUE2).toString();
+                    } else valueOne="null";
                     outputString.append("  + ");
                     break;
                 default:
