@@ -25,15 +25,13 @@ public class MakeDifference {
 
         for (String keys : keysDatabase) {
             Map<String, Object> element = new HashMap<>();
-
+            element.put(KEY, keys);
             if (!dataMap1.containsKey(keys)) {  // добавили
                 element.put(STATUS, Utilites.Stat.ADD);
-                element.put(KEY, keys);
                 element.put(VALUE1, dataMap2.get(keys));
 
             } else if (!dataMap2.containsKey(keys)) { // убрали
                 element.put(STATUS, Utilites.Stat.REMOVE);
-                element.put(KEY, keys);
                 element.put(VALUE1, dataMap1.get(keys));
 
             } else {  // если оба содержат этот ключи, проверка изменились ли данные
@@ -41,11 +39,9 @@ public class MakeDifference {
                 Object valKey2 = dataMap2.get(keys);
                 if (Objects.equals(valKey1, valKey2)) {
                     element.put(STATUS, Utilites.Stat.INVARIABLY);
-                    element.put(KEY, keys);
                     element.put(VALUE1, valKey1);
                 } else {
                     element.put(STATUS, Utilites.Stat.CHANGE);
-                    element.put(KEY, keys);
                     element.put(VALUE1, valKey1);
                     element.put(VALUE2, valKey2);
                 }
