@@ -12,6 +12,7 @@ import static hexlet.code.Utilites.VALUE2;
 
 public class MakeStylish {
     public static String makeStylish(List<Map<String, Object>> base) {
+        System.out.println(" -- -pars --- --");
         StringBuilder outputString = null;
 
         outputString = new StringBuilder("{");
