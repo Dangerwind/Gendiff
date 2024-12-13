@@ -13,6 +13,7 @@ public class Differ {
     public static String generate(String fileName1, String fileName2, String format) throws Exception {
         String fullFileData1 = readFile(fileName1);
         String fullFileData2 = readFile(fileName2);
+
         if ((fullFileData1.isEmpty()) || (fullFileData2.isEmpty())) throw new Error("File is empty!");
 
         System.out.println(" ----- 1 ----- ");
