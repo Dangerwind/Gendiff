@@ -12,7 +12,6 @@ import static hexlet.code.Utilites.VALUE2;
 
 public class MakeStylish {
     public static String makeStylish(List<Map<String, Object>> base) {
-        System.out.println(" -- -pars --- --");
         StringBuilder outputString = null;
 
         outputString = new StringBuilder("{");
@@ -21,7 +20,9 @@ public class MakeStylish {
             String valueOne = "";
             if (i.get(VALUE1) != null) {
                 valueOne = i.get(VALUE1).toString();
-            } else valueOne="null";
+            } else {
+                valueOne = "null";
+            }
 
             switch (i.get(STATUS)) {
                 case Stat.ADD:
@@ -38,7 +39,9 @@ public class MakeStylish {
                             append(valueOne).append(System.lineSeparator());
                     if (i.get(VALUE2) != null) {
                         valueOne = i.get(VALUE2).toString();
-                    } else valueOne="null";
+                    } else {
+                        valueOne = "null";
+                    }
                     outputString.append("  + ");
                     break;
                 default:
