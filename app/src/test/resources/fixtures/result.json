@@ -1,22 +1,22 @@
 [ {
   "value1" : false,
-  "state" : "ADD",
-  "key" : "follow"
+  "key" : "follow",
+  "status" : "ADD"
 }, {
   "value1" : "hexlet.io",
-  "state" : "INVARIABLY",
-  "key" : "host"
+  "key" : "host",
+  "status" : "INVARIABLY"
 }, {
   "value1" : "123.234.53.22",
-  "state" : "REMOVE",
-  "key" : "proxy"
+  "key" : "proxy",
+  "status" : "REMOVE"
 }, {
   "value2" : 20,
   "value1" : 50,
-  "state" : "CHANGE",
-  "key" : "timeout"
+  "key" : "timeout",
+  "status" : "CHANGE"
 }, {
   "value1" : true,
-  "state" : "ADD",
-  "key" : "verbose"
+  "key" : "verbose",
+  "status" : "ADD"
 } ]

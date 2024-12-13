@@ -26,25 +26,35 @@ public final class DifferTest {
         compareJson = new String(Files.readAllBytes(Paths.get(FILE_JSON)));
         comparePlain = new String(Files.readAllBytes(Paths.get(FILE_PLAIN)));
     }
-
+// 1 и 2 тесты - json и yaml в stylish
     @ParameterizedTest
     @ValueSource(strings = {"json", "yaml"})
     public void testStylishResult(String format) throws Exception {
-        String actual = Differ.generate(PATH_FIXTURES + "1." + format, PATH_FIXTURES + "2." + format, "stylish");
+        String actual = Differ.generate(PATH_FIXTURES + "1." + format, PATH_FIXTURES + "2."
+                + format, "stylish");
         assertEquals(compareStylish, actual);
     }
-
+// 3 и 4 тесты - json и yaml в plain
     @ParameterizedTest
     @ValueSource(strings = {"json", "yaml"})
     public void testPlainResult(String format) throws Exception {
-        String actual = Differ.generate(PATH_FIXTURES + "1." + format, PATH_FIXTURES + "2." + format, "plain");
+        String actual = Differ.generate(PATH_FIXTURES + "1." + format, PATH_FIXTURES + "2."
+                + format, "plain");
         assertEquals(comparePlain, actual);
     }
-
+// 5 и 6 тесты - json и yaml в json
     @ParameterizedTest
     @ValueSource(strings = {"json", "yaml"})
     public void testJsonResult(String format) throws Exception {
-        String actual = Differ.generate(PATH_FIXTURES + "1." + format, PATH_FIXTURES + "2." + format, "json");
+        String actual = Differ.generate(PATH_FIXTURES + "1." + format, PATH_FIXTURES + "2."
+                + format, "json");
         assertEquals(compareJson, actual);
+    }
+// 7 и 8 тесты - json и yaml в формат по умолчанию
+    @ParameterizedTest
+    @ValueSource(strings = {"json", "yaml"})
+    public void testDefaultResult(String format) throws Exception {
+        String actual = Differ.generate(PATH_FIXTURES + "1." + format, PATH_FIXTURES + "2." + format);
+        assertEquals(compareStylish, actual);
     }
 }
