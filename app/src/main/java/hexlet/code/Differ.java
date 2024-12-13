@@ -15,7 +15,10 @@ public class Differ {
         String fullFileData2 = readFile(fileName2);
         if ((fullFileData1.isEmpty()) || (fullFileData2.isEmpty())) throw new Error("File is empty!");
 
-        System.out.println(" ----- TEST ----- ");
+        System.out.println(" ----- 1 ----- ");
+        System.out.println(fullFileData1);
+        System.out.println(" ----- 2 ----- ");
+        System.out.println(fullFileData2);
 
         String dataType1 = getFileType(fileName1);
         String dataType2 = getFileType(fileName2);
