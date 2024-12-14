@@ -30,15 +30,28 @@ public class Differ {
         return formatter(base, format);
     }
     private static Path getFixturePath(String fileName) {
-        return Paths.get("app", "src", "test", "resources", "fixtures", fileName).toAbsolutePath().normalize();
+// если путь абсолютный или файл находится в рабочей директории
+        Path pathFile = Paths.get(fileName);
+        if (Files.exists(pathFile)) {
+            return pathFile;
+        }
+// если запустили из директории проекта
+        pathFile = Paths.get("app", "src", "test", "resources", "fixtures", fileName);
+        if (Files.exists(pathFile)) {
+            return pathFile;
+        }
+// если запустили из директории app проекта
+        pathFile = Paths.get("src", "test", "resources", "fixtures", fileName);
+        if (Files.exists(pathFile)) {
+            return pathFile;
+        }
+// нет файла вообще
+        throw new Error("File is absent!");
     }
     public static String generate(String fileName1, String fileName2) throws Exception {
         return generate(fileName1, fileName2, "stylish");
     }
     public static String readFile(String fileName) throws Exception {
-        if (fileName.charAt(0) == '/') {
-            return new String(Files.readAllBytes(Paths.get(fileName)));
-        }
         return new String(Files.readAllBytes(getFixturePath(fileName)));
     }
 
