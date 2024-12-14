@@ -14,7 +14,6 @@ import static hexlet.code.Utilites.VALUE2;
 public class MakePlain {
 
     public static String makePlain(List<Map<String, Object>> base) {
-        // StringBuilder outputString = null;
         var outputString = new StringBuilder();
         boolean firstFlag = false;
         for (var i : base) {
@@ -27,15 +26,13 @@ public class MakePlain {
             firstFlag = true;
             outputString.append("Property '").append(i.get(KEY)).append("' was ");
             switch (i.get(STATUS)) {
-                case Stat.ADD:
-                    outputString.append("added with value: ").append(objToPlain(i.get(VALUE1)));
+                case Stat.ADD: outputString.append("added with value: ").append(objToPlain(i.get(VALUE1)));
                     break;
                 case Stat.CHANGE:
                     outputString.append("updated. From ").append(objToPlain(i.get(VALUE1))).append(" to ").
                             append(objToPlain(i.get(VALUE2)));
                     break;
-                case Stat.REMOVE:
-                    outputString.append("removed");
+                case Stat.REMOVE:  outputString.append("removed");
                     break;
                 default: break;
             }
@@ -44,10 +41,7 @@ public class MakePlain {
     }
 
     public static String objToPlain(Object data) {
-        if (data instanceof Number) {
-            return data.toString();
-        }
-        if (data instanceof Boolean) {
+        if ((data instanceof Number) || (data instanceof Boolean)) {
             return data.toString();
         }
         if (data instanceof String) {

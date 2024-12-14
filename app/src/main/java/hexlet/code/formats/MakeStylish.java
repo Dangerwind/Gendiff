@@ -25,14 +25,11 @@ public class MakeStylish {
             }
 
             switch (i.get(STATUS)) {
-                case Stat.ADD:
-                    outputString.append("  + ");
+                case Stat.ADD: outputString.append("  + ");
                     break;
-                case Stat.REMOVE:
-                    outputString.append("  - ");
+                case Stat.REMOVE: outputString.append("  - ");
                     break;
-                case Stat.INVARIABLY:
-                    outputString.append("    ");
+                case Stat.INVARIABLY: outputString.append("    ");
                     break;
                 case Stat.CHANGE:
                     outputString.append("  - ").append(i.get(KEY)).append(": ").
@@ -47,10 +44,8 @@ public class MakeStylish {
                 default:
                     break;
             }
-            outputString.append(i.get(KEY)).append(": ").
-                    append(valueOne).append(System.lineSeparator());
+            outputString.append(i.get(KEY)).append(": ").append(valueOne).append(System.lineSeparator());
         }
-
         return outputString.append("}").toString();
     }
 }
